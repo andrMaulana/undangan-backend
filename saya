@@ -3,11 +3,6 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$port = getenv('PORT') ?: 8000;
-$host = '0.0.0.0';
-
-echo "Kamu PHP Framework v3.3.7\n";
-echo "Menjalankan server di http://$host:$port\n";
-
-// Jalankan built-in PHP dev server
-passthru("php -S $host:$port saya_router.php");
+exit(\Core\Kernel\Kernel::cli(
+    new \App\Kernel()
+)->run());
