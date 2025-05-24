@@ -1,0 +1,7 @@
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+exit(\Core\Kernel\Kernel::cli(
+    new \App\Kernel()
+)->run());
